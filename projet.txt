@@ -1,0 +1,10 @@
+python PythonClient\manual_control.py
+CarlaUE4.exe /Game/Maps/Town02 -carla-server -benchmark -fps=15 -windowed -ResX=800 -ResX=600
+Saving images to disk
+Now you can stop the client script and relaunch it with different options. For instance now we are going to save to disk the images of the two cameras that the client attaches to the vehicle
+
+client_example.py --autopilot --images-to-disk -c photo
+
+CarlaUE4.exe HDMaps/Town07 -carla-server -benchmark -fps=15 -windowed -ResX=800 -ResY=600
+conda activate python37
+manual_control.py -a --filter Toyota
