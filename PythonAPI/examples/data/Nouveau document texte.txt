@@ -1,0 +1,10 @@
+df = pd.read_csv(filename)
+data = (ImageItemList.from_df(df, path, col='filename', suffix=".png")
+        .random_split_by_pct()
+        .label_from_df('y_coordinate')
+        .databunch()
+       )
+
+J'ai un fichier CSV qui répertorie le nom de l'image et le numéro du flotteur que j'essaie de prédire.
+rendre le format correct de csv était délicat. quelques conseils: la colonne du nom de fichier ne doit pas contenir l'extension. la colonne y doit être un float .
+mon csv a 2 colonnes, "filename" et "y_coordinate"
